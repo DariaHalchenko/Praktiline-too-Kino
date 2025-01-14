@@ -158,7 +158,7 @@ namespace Praktiline_too_Kino
 
             // Сохраняем PDF
             pdfDocument.Save(pdfFilePath);
-            MessageBox.Show("PDF успешно создан!");
+            MessageBox.Show("PDF on edukalt loodud!");
         }
 
         // Метод для отправки email с вложением (PDF файл)
@@ -166,8 +166,8 @@ namespace Praktiline_too_Kino
         {
             if (string.IsNullOrEmpty(seanss_start))
             {
-                Debug.WriteLine("Ошибка: Время сеанса не передано в email.");
-                MessageBox.Show("Ошибка: Время сеанса не передано.");
+                Debug.WriteLine("Viga: Seansside aega ei ole üle kantud");
+                MessageBox.Show("Viga: Seansside aega ei ole üle kantud");
                 return;
             }
 

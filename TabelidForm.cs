@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Praktiline_too_Kino
@@ -17,65 +11,66 @@ namespace Praktiline_too_Kino
         public TabelidForm()
         {
             this.Height = 600;
-            this.Width = 800;
+            this.Width = 300;
             this.Text = "Tabelid";
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            // Button - Kasutajad
             Kasutajad_btn = new Button();
-            Kasutajad_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Kasutajad_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kasutajad_btn.Text = "Kasutajad";
+            Kasutajad_btn.BackColor = Color.DarkSlateBlue;
+            Kasutajad_btn.ForeColor = Color.White;
             Kasutajad_btn.AutoSize = true;
-            Kasutajad_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kasutajad_btn.Location = new Point(50, 50);
             Controls.Add(Kasutajad_btn);
             Kasutajad_btn.Click += Kasutajad_btn_Click;
 
-            // Button - Kinolaud
             Kinolaud_btn = new Button();
-            Kinolaud_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Kinolaud_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kinolaud_btn.Text = "Kinolaud";
+            Kinolaud_btn.BackColor = Color.Indigo;
+            Kinolaud_btn.ForeColor = Color.White;
             Kinolaud_btn.AutoSize = true;
-            Kinolaud_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kinolaud_btn.Location = new Point(50, 120);
             Controls.Add(Kinolaud_btn);
             Kinolaud_btn.Click += Kinolaud_btn_Click;
 
-            // Button - Kohad
             Kohad_btn = new Button();
-            Kohad_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Kohad_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kohad_btn.Text = "Kohad";
+            Kohad_btn.BackColor = Color.MediumPurple;
+            Kohad_btn.ForeColor = Color.White;
             Kohad_btn.AutoSize = true;
-            Kohad_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kohad_btn.Location = new Point(50, 190);
             Controls.Add(Kohad_btn);
             Kohad_btn.Click += Kohad_btn_Click;
 
-            // Button - Piletid
             Piletid_btn = new Button();
-            Piletid_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Piletid_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Piletid_btn.Text = "Piletid";
+            Piletid_btn.BackColor = Color.Crimson;
+            Piletid_btn.ForeColor = Color.White;
             Piletid_btn.AutoSize = true;
-            Piletid_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Piletid_btn.Location = new Point(50, 260);
             Controls.Add(Piletid_btn);
             Piletid_btn.Click += Piletid_btn_Click;
 
-            // Button - Saal
             Saal_btn = new Button();
-            Saal_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Saal_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Saal_btn.Text = "Saal";
+            Saal_btn.BackColor = Color.OliveDrab;
+            Saal_btn.ForeColor = Color.White;
             Saal_btn.AutoSize = true;
-            Saal_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Saal_btn.Location = new Point(50, 330);
             Controls.Add(Saal_btn);
             Saal_btn.Click += Saal_btn_Click;
 
-            // Button - Seansid
             Seansid_btn = new Button();
-            Seansid_btn.Font = new Font("Arial", 15, FontStyle.Bold);
+            Seansid_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Seansid_btn.Text = "Seansid";
+            Seansid_btn.BackColor = Color.SeaGreen;
+            Seansid_btn.ForeColor = Color.White;
             Seansid_btn.AutoSize = true;
-            Seansid_btn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Seansid_btn.Location = new Point(50, 400);
             Controls.Add(Seansid_btn);
             Seansid_btn.Click += Seansid_btn_Click;

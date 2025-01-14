@@ -23,17 +23,16 @@ namespace Praktiline_too_Kino
         string postersDirectory = Path.Combine(Application.StartupPath, "../../Poster");
         private List<string> valitudKohad;
 
-        static string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
-        static string db_path = Path.Combine(projectRoot, "Kino.mdf");
-        SqlConnection conn = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={db_path};Integrated Security=True");
+        SqlConnection conn = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\opilane\source\repos\KinoAB\KinoAB\Kino.mdf;Integrated Security=True");
 
+       
         SqlCommand cmd;
         SqlDataReader reader;
         Button btn1, btn2;
         PictureBox pictureBox;
-        Label filmi_nimetus_lbl;  // Добавим метку для названия фильма
+        Label filmi_nimetus_lbl; 
         List<Image> posters;
-        List<string> filmiNimetuss;  // Список для хранения названий фильмов
+        List<string> filmiNimetuss;
         int praegune_indeks;
 
         public KinoForm()
@@ -67,7 +66,6 @@ namespace Praktiline_too_Kino
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             Controls.Add(pictureBox);
 
-            // Создаем и добавляем метку для названия фильма
             filmi_nimetus_lbl = new Label();
             filmi_nimetus_lbl.Size = new Size(327, 50);
             filmi_nimetus_lbl.Location = new Point(442, 450);
@@ -169,7 +167,7 @@ namespace Praktiline_too_Kino
                     // Если ID фильма не найден, выводим ошибку
                     if (string.IsNullOrEmpty(filmiId))
                     {
-                        Debug.WriteLine("Ошибка: не найден ID фильма.");
+                        Debug.WriteLine("Viga: Filmi ID-d ei leitud");
                         return;
                     }
 
@@ -188,22 +186,22 @@ namespace Praktiline_too_Kino
                         }
                         else
                         {
-                            seanss_start = "Нет данных";
-                            Debug.WriteLine("Start_time в базе данных пустой (NULL).");
+                            seanss_start = "Andmed puuduvad";
+                            Debug.WriteLine("Start_time andmebaasis on tühi");
                         }
                     }
                     else
                     {
-                        Debug.WriteLine("Ошибка: не найден сеанс для выбранного фильма.");
-                        MessageBox.Show("Не найдено сеансов для выбранного фильма.");
+                        Debug.WriteLine("Viga: Valitud filmi jaoks ei leitud seanssi");
+                        MessageBox.Show("Valitud filmi jaoks ei ole seansse leitud");
                         return;
                     }
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка при загрузке данных из базы данных: " + ex.Message);
-                    Debug.WriteLine($"Ошибка: {ex.Message}");
+                    MessageBox.Show("Viga andmete laadimisel andmebaasist: " + ex.Message);
+                    Debug.WriteLine($"Viga: {ex.Message}");
                 }
                 finally
                 {
@@ -213,10 +211,6 @@ namespace Praktiline_too_Kino
 
             }
         }
-
-
-
-
         private void Btn2_Click(object sender, EventArgs e)
         {
             // Открываем форму выбора мест

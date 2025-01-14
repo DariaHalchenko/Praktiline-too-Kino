@@ -14,10 +14,8 @@ namespace Praktiline_too_Kino
 {
     public partial class KinolaudForm : Form
     {
-        static string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
-        static string db_path = Path.Combine(projectRoot, "Kino.mdf");
-        SqlConnection conn = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={db_path};Integrated Security=True");
-
+        SqlConnection conn = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\opilane\source\repos\KinoAB\KinoAB\Kino.mdf;Integrated Security=True");
+        
         SqlCommand cmd;
         SqlDataAdapter adapter;
         OpenFileDialog open;

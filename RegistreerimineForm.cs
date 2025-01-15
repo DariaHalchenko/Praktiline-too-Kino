@@ -82,6 +82,7 @@ namespace Praktiline_too_Kino
             txt3.Location = new Point(220, 200);
             txt3.Font = new Font("Arial", 15);
             txt3.Width = 180;
+            txt3.PasswordChar = '*';
             Controls.Add(txt3);
 
             //Rolli
@@ -111,16 +112,13 @@ namespace Praktiline_too_Kino
             {
                 string rolli = rolli_cb.SelectedItem.ToString();
 
-                // Now, handle the corresponding logic based on the selected role
                 if (rolli == "Admin")
                 {
-                    // Open the "Admin" Table form
                     TabelidForm tabelid = new TabelidForm();
                     tabelid.Show();
                 }
                 else if (rolli == "Klient")
                 {
-                    // Open the "Klient" Kino form
                     KinoForm kino = new KinoForm();
                     kino.Show();
                 }

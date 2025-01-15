@@ -19,7 +19,7 @@ namespace Praktiline_too_Kino
             Kasutajad_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kasutajad_btn.Text = "Kasutajad";
             Kasutajad_btn.BackColor = Color.DarkSlateBlue;
-            Kasutajad_btn.ForeColor = Color.White;
+            Kasutajad_btn.ForeColor = Color.Black;
             Kasutajad_btn.AutoSize = true;
             Kasutajad_btn.Location = new Point(50, 50);
             Controls.Add(Kasutajad_btn);
@@ -29,7 +29,7 @@ namespace Praktiline_too_Kino
             Kinolaud_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kinolaud_btn.Text = "Kinolaud";
             Kinolaud_btn.BackColor = Color.Indigo;
-            Kinolaud_btn.ForeColor = Color.White;
+            Kinolaud_btn.ForeColor = Color.Black;
             Kinolaud_btn.AutoSize = true;
             Kinolaud_btn.Location = new Point(50, 120);
             Controls.Add(Kinolaud_btn);
@@ -39,7 +39,7 @@ namespace Praktiline_too_Kino
             Kohad_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Kohad_btn.Text = "Kohad";
             Kohad_btn.BackColor = Color.MediumPurple;
-            Kohad_btn.ForeColor = Color.White;
+            Kohad_btn.ForeColor = Color.Black;
             Kohad_btn.AutoSize = true;
             Kohad_btn.Location = new Point(50, 190);
             Controls.Add(Kohad_btn);
@@ -49,7 +49,7 @@ namespace Praktiline_too_Kino
             Piletid_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Piletid_btn.Text = "Piletid";
             Piletid_btn.BackColor = Color.Crimson;
-            Piletid_btn.ForeColor = Color.White;
+            Piletid_btn.ForeColor = Color.Black;
             Piletid_btn.AutoSize = true;
             Piletid_btn.Location = new Point(50, 260);
             Controls.Add(Piletid_btn);
@@ -59,7 +59,7 @@ namespace Praktiline_too_Kino
             Saal_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Saal_btn.Text = "Saal";
             Saal_btn.BackColor = Color.OliveDrab;
-            Saal_btn.ForeColor = Color.White;
+            Saal_btn.ForeColor = Color.Black;
             Saal_btn.AutoSize = true;
             Saal_btn.Location = new Point(50, 330);
             Controls.Add(Saal_btn);
@@ -69,7 +69,7 @@ namespace Praktiline_too_Kino
             Seansid_btn.Font = new Font("Algerian", 12, FontStyle.Bold);
             Seansid_btn.Text = "Seansid";
             Seansid_btn.BackColor = Color.SeaGreen;
-            Seansid_btn.ForeColor = Color.White;
+            Seansid_btn.ForeColor = Color.Black;
             Seansid_btn.AutoSize = true;
             Seansid_btn.Location = new Point(50, 400);
             Controls.Add(Seansid_btn);

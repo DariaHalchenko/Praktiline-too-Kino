@@ -234,8 +234,6 @@ namespace Praktiline_too_Kino
                 // Копируем новое изображение
                 File.Copy(open.FileName, imagePath);
 
-
-
                 // Обновляем запись в базе данных
                 conn.Open();
                 cmd = new SqlCommand("UPDATE Kinolaud SET Filmi_nimetus=@filmi_nimetus, Aasta=@aasta, Poster=@poster, Saal_Id=@saalId WHERE Id=@id", conn);
@@ -344,14 +342,13 @@ namespace Praktiline_too_Kino
 
                 if (save.ShowDialog() == DialogResult.OK && filmi_nimetus_txt.Text != null)
                 {
-                    // If there's an old image, delete it first
+              
                     string oldImagePath = Path.Combine(Path.GetFullPath(@"..\..\Poster"), filmi_nimetus_txt.Text + extension);
                     if (File.Exists(oldImagePath))
                     {
                         File.Delete(oldImagePath);
                     }
 
-                    // Copy the new image
                     File.Copy(open.FileName, save.FileName);
                     poster_pb.Image = Image.FromFile(save.FileName);
                 }
